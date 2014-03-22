@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+	<mapping path="/resources/*" exclude="true" />
+   	<mapping path="/login*.htm" exclude="true"/>
+   	<mapping path="/test.htm" exclude="true"/>
+   	<!-- 主页配置 -->
+	<mapping path="/index*.htm" decorator="/WEB-INF/layouts/main/main.jsp"/>
+</sitemesh>
