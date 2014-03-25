@@ -1,67 +1,6 @@
-<!-- AUI Documentation -->
-<!DOCTYPE html>
-    <html>
-    <head>
-
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Fides Admin</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-        <!-- Favicons -->
-
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon/logo-144-circle.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon/logo-114-circle.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon/logo-72-circle.png">
-        <link rel="apple-touch-icon-precomposed" href="images/icon/logo-57-circle.png">
-        <link rel="shortcut icon" href="images/icon/favicon-circle.png">
-
-        <!--[if lt IE 9]>
-          <script src="fides/js/minified/core/html5shiv.min.js"></script>
-          <script src="fides/js/minified/core/respond.min.js"></script>
-        <![endif]-->
-
-        <!-- Fides Admin CSS Core -->
-
-        <link rel="stylesheet" type="text/css" href="fides/css/minified/aui-production.min.css">
-
-        <!-- Theme UI -->
-
-        <link id="layout-theme" rel="stylesheet" type="text/css" href="fides/themes/minified/fides/color-schemes/dark-blue.min.css">
-
-        <!-- Fides Admin Responsive -->
-
-        <link rel="stylesheet" type="text/css" href="fides/themes/minified/fides/common.min.css">
-        <link rel="stylesheet" type="text/css" href="fides/themes/minified/fides/responsive.min.css">
-
-        <style type="text/css">
-        #header-logo .index-a {
-			float: left;
-		}
-        #header-logo>a img {
-			margin: 9px 5px 0 0;
-			float: left;
-			width: 34px;
-			height: 34px;
-			border-radius: 4px;
-		}
-        </style>
-
-        <!-- Fides Admin JS -->
-
-        <script type="text/javascript" src="fides/js/minified/aui-production.min.js"></script>
-
-    </head>
-    <body>
-
-        <div id="loading" class="ui-front loader ui-widget-overlay bg-white opacity-100">
-            <img src="fides/images/loader-dark.gif" alt="">
-        </div>
-
-        <div id="page-wrapper">
-
-            <!-- 右边设置开始 -->
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/common/tags.jsp"%>
+			<!-- 右边设置开始 -->
             <div class="theme-customizer">
                 <a href="javascript:;" class="change-theme-btn" title="Change theme">
                     <i class="glyph-icon icon-cog"></i>
@@ -72,10 +11,10 @@
             </div>
             <!-- 右边设置结束 -->
 
-            <!-- #顶部开始 -->
+            <!-- #顶部#page-header开始 -->
             <div id="page-header" class="clearfix">
                 <div id="header-logo">
-                	<a href="" class="index-a"><img src="images/icon/favicon-square.png"/></a><span>酒店管理系统</span>
+                	<a href="" class="index-a"><img src="${ctx}/resources/images/icon/favicon-square.png"/></a><span>酒店管理系统</span>
                 	<a href="javascript:;" class="tooltip-button" data-placement="bottom" title="Close sidebar" id="close-sidebar">
                         <i class="glyph-icon icon-caret-left"></i>
                     </a>
@@ -89,7 +28,7 @@
                 
                 <div class="user-profile dropdown">
                     <a href="javascript:;" title="" class="user-ico clearfix" data-toggle="dropdown">
-                        <img width="36" src="assets/images/gravatar.jpg" alt="">
+                        <img width="36" src="${ctx}/resources/fides/images/gravatar.jpg" alt="">
                         <span>Horia Simon</span>
                         <i class="glyph-icon icon-chevron-down"></i>
                     </a>
@@ -283,8 +222,9 @@
                 </div>
 
             </div>
-            <!-- #顶部结束 -->
+            <!-- #顶部#page-header结束 -->
 
+			<!-- 侧边栏开始 -->
             <div id="page-sidebar" class="scrollable-content">
 
                 <div id="sidebar-menu">
@@ -641,43 +581,4 @@
 
                     </div>
                 </div>
-
-            </div><!-- #page-sidebar -->
-
-			<div id="page-content-wrapper" style="padding: 25px;">
-				11111111111111111111
-			</div><!-- #page-content -->
-
-        </div><!-- #page-wrapper -->
-
-    
-        <script>
-            jQuery(window).load(
-                function(){
-
-                    var wait_loading = window.setTimeout( function(){
-                      $('#loading').slideUp('fast');
-                      jQuery('body').css('overflow','auto');
-                    },1000
-                );
-            });
-
-            $('#close-sidebar').click(function(){
-                $('body').toggleClass('close-sidebar');
-                $(this).toggleClass('hidden');
-                $('#rm-close-sidebar').toggleClass('hidden');
-                $('#page-sidebar').toggleClass('hidden');
-                $('#page-content-wrapper').css('margin-left','0px');
-            });
-
-            $('#rm-close-sidebar').click(function(){
-                $('body').toggleClass('close-sidebar');
-                $(this).toggleClass('hidden');
-                $('#close-sidebar').toggleClass('hidden');
-                $('#page-sidebar').toggleClass('hidden');
-                $('#page-content-wrapper').css('margin-left','220px');
-            });
-        </script>
-    </body>
-</html>
-
+            </div><!-- 侧边栏#page-sidebar结束 -->

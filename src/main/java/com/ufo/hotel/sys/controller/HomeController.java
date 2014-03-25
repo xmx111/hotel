@@ -19,4 +19,9 @@ public class HomeController {
         return "login";
     }
     
+    @RequestMapping("hotel/index.htm")
+    public String indexHotel(ModelMap map) {
+        return "index";
+    }
+    
 }

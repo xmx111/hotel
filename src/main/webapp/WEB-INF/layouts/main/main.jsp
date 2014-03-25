@@ -3,32 +3,55 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 	<head>
-		<tilte><sitemesh:write property='title'/></tilte>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-		<meta http-equiv="Cache-Control" content="no-store" />
-		<meta http-equiv="Pragma" content="no-cache" />
-		<meta http-equiv="Expires" content="0" />
-		<!-- Bootstrap -->
-	    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <tilte><sitemesh:write property='title'/></tilte>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!-- Favicons -->
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${ctx}/resources/images/icon/logo-144-circle.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="${ctx}/resources/images/icon/logo-114-circle.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="${ctx}/resources/images/icon/logo-72-circle.png">
+        <link rel="apple-touch-icon-precomposed" href="${ctx}/resources/images/icon/logo-57-circle.png">
+        <link rel="shortcut icon" href="${ctx}/resources/images/icon/favicon-circle.png">
 	
-	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	    <!--[if lt IE 9]>
-	        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
-	        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
-	    <![endif]-->
+		<!--[if lt IE 9]>
+          <script src="${ctx}/resources/fides/js/minified/core/html5shiv.min.js"></script>
+          <script src="${ctx}/resources/fides/js/minified/core/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- CSS Core -->
+        <link rel="stylesheet" type="text/css" href="${ctx}/resources/fides/css/minified/aui-production.min.css">
+        <link id="layout-theme" rel="stylesheet" type="text/css" href="${ctx}/resources/fides/themes/minified/fides/color-schemes/dark-blue.min.css">
+        <link rel="stylesheet" type="text/css" href="${ctx}/resources/fides/themes/minified/fides/common.min.css">
+        <link rel="stylesheet" type="text/css" href="${ctx}/resources/fides/themes/minified/fides/responsive.min.css">
+
+        <style type="text/css">
+        #header-logo .index-a {
+			float: left;
+		}
+        #header-logo>a img {
+			margin: 9px 5px 0 0;
+			float: left;
+			width: 34px;
+			height: 34px;
+			border-radius: 4px;
+		}
+        </style>
 	</head>
 	<body scroll="no">
-		<%@ include file="/WEB-INF/layouts/main/header.jsp"%>
-		<div id="mainContainer" class="layoutMain">
-			<sitemesh:write property="body"/>
+		<div id="page-wrapper">
+			<%@ include file="/WEB-INF/layouts/main/header.jsp"%>
+			<div id="page-content-wrapper" style="padding: 25px;">
+				<sitemesh:write property="body"/>
+			</div>
+			<%@ include file="/WEB-INF/layouts/main/footer.jsp"%>
 		</div>
-		<%@ include file="/WEB-INF/layouts/main/footer.jsp"%>
 		
 		<!-- script -->
-	    <script src="${ctx}/resources/jquery/jquery-1.11.0.min.js"></script>
-	    <script src="${ctx}/resources/bootstrap/js/bootstrap.min.js"></script>
+        <script src="${ctx}/resources/fides/js/minified/aui-production.min.js"></script>
+        <script src="${ctx}/resources/js/index.js"></script>
 	</body>
 </html>

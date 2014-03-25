@@ -4,5 +4,5 @@
    	<mapping path="/login*.htm" exclude="true"/>
    	<mapping path="/test.htm" exclude="true"/>
    	<!-- 主页配置 -->
-	<mapping path="/index*.htm" decorator="/WEB-INF/layouts/main/main.jsp"/>
+	<mapping path="/index.htm" decorator="/WEB-INF/layouts/main/main.jsp"/>
 </sitemesh>

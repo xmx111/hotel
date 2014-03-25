@@ -66316,7 +66316,7 @@ Enjoy!
         }
       , notnull:        "This value should not be null."
       , notblank:       "This value should not be blank."
-      , required:       "This value is required."
+      , required:       "必需."
       , regexp:         "This value seems to be invalid."
       , min:            "This value should be greater than or equal to %s."
       , max:            "This value should be lower than or equal to %s."

@@ -3,5 +3,6 @@
 <html>
 <body>
 <h2>Hello World!</h2>
+<img src='${ctx}/resources/images/icon/favicon-square.png' />
 </body>
 </html>
