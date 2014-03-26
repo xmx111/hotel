@@ -25,14 +25,16 @@ public enum MenuModelType {
     private static Map<MenuModelType, Integer> typeMap = new HashMap<MenuModelType, Integer>();
     private static Map<Integer, MenuModelType> valueMap = new HashMap<Integer, MenuModelType>();
     private static Map<MenuModelType, String> nameMap = new HashMap<MenuModelType, String>();
+    private static Map<MenuModelType, String> iconMap = new HashMap<MenuModelType, String>();
     static {
         typeMap.put(MenuModelType.CONFIG, 1);
         typeMap.put(MenuModelType.CUSTOM, 2);
 
-        
-
         nameMap.put(MenuModelType.CONFIG, "系统配置");
         nameMap.put(MenuModelType.CUSTOM, "客户管理");
+        
+        iconMap.put(MenuModelType.CONFIG, "");
+        iconMap.put(MenuModelType.CUSTOM, "");
 
         for (MenuModelType state : typeMap.keySet()) {
             valueMap.put(typeMap.get(state), state);
@@ -53,6 +55,10 @@ public enum MenuModelType {
     public String toName() {
         return nameMap.get(this);
     }
+    
+    public String toIcon(){
+        return iconMap.get(this);
+    }
 
     public Integer getValue() {
         return value();
@@ -60,6 +66,10 @@ public enum MenuModelType {
 
     public String getName() {
         return toName();
+    }
+    
+    public String getIcon() {
+        return toIcon();
     }
 
     public static List<MenuModelType> list() {

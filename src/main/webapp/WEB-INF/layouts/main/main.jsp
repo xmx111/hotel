@@ -52,6 +52,10 @@
 		
 		<!-- script -->
         <script src="${ctx}/resources/fides/js/minified/aui-production.min.js"></script>
+        <script type="text/javascript">
+    	var ctx = '${ctx}';
+    	window.ufo = {ctx:ctx};
+        </script>
         <script src="${ctx}/resources/js/index.js"></script>
 	</body>
 </html>

@@ -20,6 +20,8 @@ public class InitDataService {
     }
     
     @Autowired
+    InitMenuDataService initMenuDataService;
+    @Autowired
     InitAdminDataService initAdminDataService;
     
     private static boolean init = false;
@@ -33,7 +35,10 @@ public class InitDataService {
                         Thread.sleep(1500);
                     } catch (InterruptedException e) {
                     }
-                    initAdminDataService.init();
+//                    if (!initMenuDataService.isInit()){
+//                        initMenuDataService.init();
+//                        initAdminDataService.init();
+//                    }
                 }
             }).start();
             init = true;
