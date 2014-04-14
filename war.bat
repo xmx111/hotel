@@ -9,5 +9,5 @@
 @MAVEN_OPTS为java虚拟机参数配置如:MAVEN_OPTS="-Xms128m -Xmx512m"
 ::
 set MAVEN_OPTS="-Dfile.encoding=UTF-8"
-mvn clean scm:update process-classes  war:war  %1 %2 %3 %4 %5 %6 %7 %8 %9
+mvn clean process-classes  war:war  %1 %2 %3 %4 %5 %6 %7 %8 %9
 pause
