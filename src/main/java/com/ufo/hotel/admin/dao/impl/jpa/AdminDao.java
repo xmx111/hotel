@@ -17,7 +17,7 @@ import com.ufo.hotel.admin.dao.IAdminDao;
  * @version 0.1
  *
  */
-@Repository
+@Repository("adminHotelDao")
 public class AdminDao extends BaseDao<Admin> implements IAdminDao {
 
     

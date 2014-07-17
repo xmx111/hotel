@@ -31,10 +31,10 @@ import com.ufo.hotel.admin.service.IAdminService;
 public class AdminService extends BaseService<AdminDto, Admin> implements IAdminService {
 
     @Autowired
-    IAdminDao adminDao;
+    IAdminDao adminHotelDao;
 
     public List<AdminDto> findAdmin(Page page) {
-        final Collection<Admin> coll = adminDao.list(page);
+        final Collection<Admin> coll = adminHotelDao.list(page);
         return toDtoList(coll);
     }
 
@@ -57,7 +57,7 @@ public class AdminService extends BaseService<AdminDto, Admin> implements IAdmin
 
     @Override
     protected IBaseDao<Admin> getBaseDao() {
-        return adminDao;
+        return adminHotelDao;
     }
 
     
